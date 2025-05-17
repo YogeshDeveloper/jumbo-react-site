@@ -15,12 +15,12 @@ const roles = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-screen overflow-y-auto flex flex-col items-center justify-start bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
+    <main className="min-h-screen w-screen overflow-y-auto flex flex-col items-center bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
       {/* Glow effects */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
 
-      <div className="z-10 flex flex-col items-center justify-start w-full py-8">
+      <div className="z-10 flex flex-col items-center justify-start w-full py-8 min-h-screen">
         {/* Logo */}
         <Image
           src="/logo.png"
@@ -90,6 +90,9 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* Spacer to ensure footer visibility */}
+        <div className="flex-grow" />
 
         {/* Footer */}
         <p className="text-sm text-gray-500 mt-10 mb-6 text-center">&copy; 2025 Jumbo Consulting. All rights reserved.</p>
