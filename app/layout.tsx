@@ -1,12 +1,9 @@
 export const metadata = {
-  title: 'Jumbo Consulting',
+  title: "Jumbo Consulting",
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-    other: [
-      { rel: 'icon', url: '/favicon-192.png' },
-      { rel: 'icon', url: '/favicon-512.png' },
-    ],
+    icon: "/favicon-v2.ico",
+    apple: "/apple-touch-icon-v2.png",
+    shortcut: "/favicon-192-v2.png",
   },
 };
 
