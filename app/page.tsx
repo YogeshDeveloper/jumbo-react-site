@@ -3,7 +3,7 @@ import RoleGrid from "./components/RoleGrid";
 export const metadata = {
   title: "Jumbo Consulting",
   icons: {
-    icon: "/favicon-v2.ico",
+    icon: "/favicon.ico",
   },
 };
 
