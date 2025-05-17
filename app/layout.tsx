@@ -2,7 +2,7 @@ export const metadata = {
   title: "Jumbo Consulting",
   description: "We Hire. You Build.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-v2.ico",
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon-192.png"
   },
