@@ -15,7 +15,7 @@ const roles = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-gray-950 text-white overflow-hidden">
+    <main className="h-screen w-screen overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
       {/* Glow effects */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
@@ -26,19 +26,19 @@ export default function Home() {
         alt="Jumbo Logo"
         width={64}
         height={64}
-        className="mb-6 animate-fade-in"
+        className="mb-6 animate-fade-in z-10"
       />
 
       {/* Title */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 z-10">
         We Hire. You Build.
       </h1>
-      <p className="text-lg md:text-xl text-center max-w-xl mb-6 text-gray-300">
+      <p className="text-lg md:text-xl text-center max-w-xl mb-6 text-gray-300 z-10">
         Quietly building bold teams for Seed to Series B startups.
       </p>
 
       {/* Buttons */}
-      <div className="flex gap-4 mb-10">
+      <div className="flex gap-4 mb-10 z-10">
         <a
           href="mailto:support@jumbo.consulting"
           className="bg-white text-black px-6 py-2 rounded-md shadow hover:scale-105 transition"
@@ -55,12 +55,12 @@ export default function Home() {
       </div>
 
       {/* Roles Grid */}
-      <div className="text-xl font-semibold mb-6">Specialized In Hiring For Startups</div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-12">
+      <div className="text-xl font-semibold mb-6 z-10">Specialized In Hiring For Startups</div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-6 z-10">
         {roles.map((role) => (
           <div
             key={role}
-            className="bg-gray-800 rounded-lg px-4 py-2 text-center text-white hover:bg-gray-700 shadow-md transition animate-fade-in"
+            className="bg-gray-800 rounded-lg px-4 py-2 text-center text-white border border-gray-700 hover:border-blue-500 shadow-md hover:shadow-blue-500/20 transition-transform transform hover:-translate-y-1 hover:scale-105"
           >
             {role}
           </div>
@@ -68,7 +68,7 @@ export default function Home() {
       </div>
 
       {/* Images side by side */}
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col md:flex-row gap-6 z-10">
         <div className="rounded-xl overflow-hidden shadow-lg">
           <Image
             src="/startup1.jpg"
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <p className="text-sm text-gray-500 mt-10">&copy; 2025 Jumbo Consulting. All rights reserved.</p>
+      <p className="text-sm text-gray-500 mt-6 z-10">&copy; 2025 Jumbo Consulting. All rights reserved.</p>
     </main>
   );
 }
