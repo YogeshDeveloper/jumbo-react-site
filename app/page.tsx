@@ -15,12 +15,12 @@ const roles = [
 
 export default function Home() {
   return (
-    <main className="h-screen w-screen overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
+    <main className="min-h-screen w-screen overflow-y-auto flex flex-col items-center justify-start bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
       {/* Glow effects */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-blue-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500 rounded-full opacity-30 blur-3xl animate-pulse"></div>
 
-      <div className="z-10 flex flex-col items-center justify-between h-full py-8">
+      <div className="z-10 flex flex-col items-center justify-start w-full py-8">
         {/* Logo */}
         <Image
           src="/logo.png"
@@ -58,11 +58,11 @@ export default function Home() {
 
         {/* Roles Section */}
         <div className="mt-10 text-xl font-semibold">Specialized In Hiring For Startups</div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-4 w-full max-w-5xl px-4">
           {roles.map((role) => (
             <div
               key={role}
-              className="bg-gray-800 rounded-lg px-4 py-2 text-center border border-gray-700 shadow-md transition-transform hover:-translate-y-1 hover:scale-105 hover:shadow-blue-500/20 hover:border-blue-400 animate-fade-in hover:bg-gradient-to-r from-[#66CCFF]/20 to-transparent"
+              className="bg-gray-800 rounded-lg px-4 py-2 text-center border border-gray-700 shadow-md transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-blue-500/20 hover:border-blue-400 active:scale-100"
             >
               {role}
             </div>
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Images */}
-        <div className="flex flex-col md:flex-row gap-6 mt-8">
+        <div className="flex flex-col md:flex-row gap-6 mt-8 px-4">
           <div className="rounded-xl overflow-hidden shadow-xl">
             <Image
               src="/startup1.jpg"
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <p className="text-sm text-gray-500 mt-6">&copy; 2025 Jumbo Consulting. All rights reserved.</p>
+        <p className="text-sm text-gray-500 mt-10 mb-6 text-center">&copy; 2025 Jumbo Consulting. All rights reserved.</p>
       </div>
     </main>
   );
