@@ -13,6 +13,13 @@ const roles = [
   "Growth Marketer",
 ];
 
+export const metadata = {
+  title: "Jumbo Consulting",
+  icons: {
+    icon: "/favicon.png",
+  },
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen w-screen overflow-y-auto flex flex-col items-center bg-gradient-to-br from-gray-900 to-gray-950 text-white px-4 relative">
