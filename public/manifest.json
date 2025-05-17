@@ -1,7 +1,7 @@
 {
   "name": "Jumbo Consulting",
   "short_name": "Jumbo",
-  "description": "Jumbo Consulting - We Hire. You Build.",
+  "description": "We Hire. You Build.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -15,8 +15,7 @@
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     }
   ]
 }
