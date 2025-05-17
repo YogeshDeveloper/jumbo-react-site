@@ -1,12 +1,13 @@
-// app/layout.tsx
 export const metadata = {
   title: 'Jumbo Consulting',
-  description: 'We Hire. You Build.',
   icons: {
-    icon: '/favicon-192.png',
+    icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
+    other: [
+      { rel: 'icon', url: '/favicon-192.png' },
+      { rel: 'icon', url: '/favicon-512.png' },
+    ],
   },
-  manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
