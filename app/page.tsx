@@ -16,7 +16,7 @@ const roles = [
 export const metadata = {
   title: "Jumbo Consulting",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
