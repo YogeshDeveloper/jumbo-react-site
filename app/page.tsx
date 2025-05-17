@@ -45,19 +45,6 @@ export default function Home() {
 
         <RoleGrid />
 
-        <div className="flex flex-wrap justify-center items-center gap-6 mt-10 max-w-4xl px-4 w-full">
-          <img
-            src="/startup1.jpg"
-            alt="Startup Workspace 1"
-            className="rounded-2xl shadow-xl w-full sm:w-[45%] max-w-xs"
-          />
-          <img
-            src="/startup2.jpg"
-            alt="Startup Workspace 2"
-            className="rounded-2xl shadow-xl w-full sm:w-[45%] max-w-xs"
-          />
-        </div>
-
         <footer className="text-sm text-gray-400 mt-10 text-center">
           &copy; 2025 Jumbo Consulting. All rights reserved.
         </footer>
