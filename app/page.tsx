@@ -1,53 +1,80 @@
-// app/page.tsx
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const roles = [
+  "CTO",
+  "ML Engineer",
+  "Frontend Developer",
+  "Backend Developer",
+  "SDR",
+  "Account Executive",
+  "Webflow Developer",
+  "Growth Marketer",
+];
 
 export default function Home() {
-  const roles = [
-    'CTO',
-    'ML Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'SDR',
-    'Account Executive',
-    'Webflow Developer',
-    'Growth Marketer',
-  ];
-
   return (
-    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-center px-4 py-12 space-y-10">
-      <Image src="/logo.png" alt="Jumbo Consulting Logo" width={160} height={160} />
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center">We Hire. You Build.</h1>
-      <p className="text-lg text-center max-w-xl">
-        Quietly building bold teams for Seed to Series B startups.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link
-          href="mailto:yogesh@jumbo.consulting"
-          className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
-        >
-          Email Us
-        </Link>
-        <Link
-          href="https://calendly.com/yogesh-jumbo/30min"
-          className="border border-black px-6 py-3 rounded-full hover:bg-gray-100 transition"
-        >
-          Book a Call
-        </Link>
-      </div>
-      <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mt-8">
-        {roles.map((role) => (
-          <div
-            key={role}
-            className="border border-gray-200 px-4 py-2 text-center rounded-lg shadow-sm hover:shadow-md transition"
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-100 text-gray-900">
+      <div className="container mx-auto px-4 py-12 flex flex-col items-center justify-center gap-8 text-center">
+        <Image src="/logo.png" alt="Jumbo Consulting Logo" width={200} height={200} />
+        <h1 className="text-4xl md:text-5xl font-bold">We Hire. You Build.</h1>
+        <p className="text-lg md:text-xl max-w-xl">
+          Quietly building bold teams for Seed to Series B startups.
+        </p>
+        <div className="flex gap-4">
+          <a
+            href="mailto:yogesh@jumbo.consulting"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded shadow"
           >
-            {role}
-          </div>
-        ))}
-      </section>
-      <footer className="mt-12 text-sm text-gray-500 text-center">
-        © {new Date().getFullYear()} Jumbo Consulting. All rights reserved.
-      </footer>
+            Email Us
+          </a>
+          <a
+            href="https://calendly.com/yogesh-jumbo/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 hover:bg-gray-900 text-white font-medium py-2 px-4 rounded shadow"
+          >
+            Book a Call
+          </a>
+        </div>
+
+        <h2 className="text-2xl md:text-3xl font-semibold mt-12">
+          Specialized In Hiring For Startups
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-6">
+          {roles.map((role, index) => (
+            <motion.div
+              key={role}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white border border-gray-300 text-sm md:text-base font-medium py-2 px-4 rounded-xl shadow hover:shadow-md"
+            >
+              {role}
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-16 flex flex-col gap-6 w-full items-center">
+          <Image
+            src="/image1.jpg"
+            alt="Team Illustration 1"
+            width={400}
+            height={300}
+            className="rounded-xl shadow"
+          />
+          <Image
+            src="/image2.jpg"
+            alt="Team Illustration 2"
+            width={400}
+            height={300}
+            className="rounded-xl shadow"
+          />
+        </div>
+
+        <footer className="mt-20 text-sm text-gray-500">
+          © 2025 Jumbo Consulting. All rights reserved.
+        </footer>
+      </div>
     </main>
   );
 }
