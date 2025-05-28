@@ -1,1 +1,1 @@
-export default {};
+// Tailwind configuration
