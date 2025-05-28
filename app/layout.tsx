@@ -1,5 +1,5 @@
 // app/layout.tsx
-import './globals.css'; // Only if you have global styles
+// import './globals.css'; // Only if you have global styles
 
 export const metadata = {
   title: 'Jumbo Consulting',
