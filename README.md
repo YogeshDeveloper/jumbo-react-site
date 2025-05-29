@@ -1,1 +1,3 @@
-# Jumbo Consulting Website
+# Jumbo Consulting
+
+Modern single-page site with Tailwind and Next.js
