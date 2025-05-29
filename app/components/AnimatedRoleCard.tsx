@@ -1,1 +1,0 @@
-// Animated card component using framer-motion

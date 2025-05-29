@@ -1,1 +1,1 @@
-// PostCSS configuration
+module.exports = {};
