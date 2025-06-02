@@ -1,76 +1,94 @@
+// app/page.tsx
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import logo from "../public/logo.png";
+import image1 from "../public/image1.jpg";
+import image2 from "../public/image2.jpg";
 
 const roles = [
-  "CTO", "ML Engineer", "Backend Developer", "Frontend Developer",
-  "DevOps Engineer", "UI/UX Designer", "Product Manager", "QA Engineer"
+  "CTO",
+  "ML Engineer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Account Executive",
+  "Webflow Developer",
+  "Growth Marketer",
+  "Growth Marketer"
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-100 px-4 md:px-24 py-8 text-gray-900">
-      
-      {/* Header */}
-      <div className="flex justify-between items-center mb-12">
-        <Image src="/logo.png" alt="Jumbo Consulting Logo" width={140} height={40} />
-      </div>
-
-      {/* Hero Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        {/* Text Section */}
-        <div className="max-w-xl space-y-6">
-          <motion.h1 
-            className="text-5xl font-extrabold leading-tight"
-            initial={{ opacity: 0, y: 10 }}
+    <main className="min-h-screen bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white font-sans px-6 py-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div className="flex-1 space-y-6">
+          <Image src={logo} alt="Jumbo Consulting Logo" width={150} height={150} />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-6xl font-bold leading-tight"
           >
-            We Hire. <span className="text-blue-500">You Build.</span>
+            <span className="text-white">We Hire.</span>{" "}
+            <span className="text-blue-400">You Build.</span>
           </motion.h1>
-          <p className="text-lg text-gray-600">
-            Jumbo Consulting helps startups hire the right people to build faster, better, and bolder.
+          <p className="text-lg text-gray-300 max-w-xl">
+            Quietly building bold teams for Seed to Series B startups.
           </p>
-          <div className="space-x-4">
-            <a href="mailto:hello@jumboconsulting.com" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-5 py-3 rounded-xl shadow-md transition">
+          <div className="flex gap-4">
+            <a
+              href="mailto:yogesh@jumbo.consulting"
+              className="px-6 py-2 rounded-md bg-white text-blue-800 font-medium shadow hover:shadow-xl transition"
+            >
               Email Us
             </a>
-            <a href="#" className="inline-block border border-blue-500 hover:bg-blue-50 text-blue-500 font-semibold px-5 py-3 rounded-xl transition">
+            <a
+              href="#"
+              className="px-6 py-2 rounded-md border border-white text-white hover:bg-white hover:text-blue-800 transition"
+            >
               Book a Call
             </a>
           </div>
         </div>
-
-        {/* Image 1 */}
-        <div>
-          <Image src="/image1.jpg" alt="Teamwork Illustration" width={400} height={300} className="rounded-xl shadow-xl" />
+        <div className="flex-1">
+          <Image
+            src={image1}
+            alt="Jumbo Ghibli 1"
+            width={500}
+            height={500}
+            className="rounded-2xl shadow-lg"
+          />
         </div>
       </div>
 
-      {/* Roles Section */}
-      <div className="mt-20">
-        <h2 className="text-2xl font-semibold mb-6">We hire for roles like:</h2>
-        <div className="flex flex-wrap gap-4">
-          {roles.map((role, idx) => (
+      <section className="mt-20 text-center">
+        <h2 className="text-3xl font-semibold mb-8">Specialized In Hiring For Startups</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          {roles.map((role, index) => (
             <motion.div
-              key={idx}
+              key={index}
               whileHover={{ scale: 1.05 }}
-              className="px-5 py-3 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white font-semibold shadow-md transition"
+              whileTap={{ scale: 0.98 }}
+              className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg cursor-pointer text-sm font-medium"
             >
               {role}
             </motion.div>
           ))}
         </div>
+      </section>
+
+      <div className="mt-20 flex justify-center">
+        <Image
+          src={image2}
+          alt="Jumbo Ghibli 2"
+          width={600}
+          height={400}
+          className="rounded-2xl shadow-xl"
+        />
       </div>
 
-      {/* Image 2 */}
-      <div className="mt-20">
-        <Image src="/image2.jpg" alt="Workflow Illustration" width={800} height={400} className="rounded-xl shadow-xl mx-auto" />
-      </div>
-
-      {/* Footer */}
-      <footer className="mt-20 text-center text-sm text-gray-500">
+      <footer className="mt-16 text-center text-sm text-gray-400">
         © 2025 Jumbo Consulting. All rights reserved.
       </footer>
     </main>
