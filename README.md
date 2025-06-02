@@ -1,3 +1,2 @@
 # Jumbo Consulting
-
-Modern single-page site with Tailwind and Next.js
+This is a modern recruitment site.

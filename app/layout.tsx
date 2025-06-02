@@ -1,8 +1,8 @@
-import './styles/globals.css';
+import '../styles/globals.css';
 
 export const metadata = {
   title: 'Jumbo Consulting',
-  description: 'Quietly building bold teams for Seed to Series B startups.',
+  description: 'We Hire. You Build.',
 };
 
 export default function RootLayout({ children }) {
