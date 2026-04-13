@@ -8,13 +8,13 @@ import image1 from "../public/image1.jpg";
 import image2 from "../public/image2.jpg";
 
 const roles = [
-  "CTO",
-  "ML Engineer",
-  "Frontend Developer",
-  "Backend Developer",
+  "SDE 2",
+  "SDE 3",
+  "Data Engineer",
+  "SDR",
   "Account Executive",
-  "Webflow Developer",
-  "Growth Marketer",
+  "ML Engineer",
+  "Staff Engineer",
   "Growth Marketer"
 ];
 
@@ -34,7 +34,7 @@ export default function Home() {
             <span className="text-blue-400">You Build.</span>
           </motion.h1>
           <p className="text-lg text-gray-300 max-w-xl">
-            Quietly building bold teams for Seed to Series B startups.
+            Quietly building bold teams from Seed-stage startups to public companies and GCCs.
           </p>
           <div className="flex gap-4">
             <a
@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       <section className="mt-20 text-center">
-        <h2 className="text-3xl font-semibold mb-8">Specialized In Hiring For Startups</h2>
+        <h2 className="text-3xl font-semibold mb-8">Expertise in hiring for key roles</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {roles.map((role, index) => (
             <motion.div
