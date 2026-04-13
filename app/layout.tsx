@@ -2,7 +2,7 @@ import './styles/globals.css';
 
 export const metadata = {
   title: 'Jumbo Consulting',
-  description: 'Quietly building bold teams for Seed to Series B startups.',
+  description: 'Quietly building bold teams from Seed-stage startups to public companies and GCCs.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
